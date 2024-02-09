@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 4
+#define MAX 4
 
 void display();
 void push();
@@ -11,7 +11,7 @@ void pop();
 void peek();
 
 struct _STACK_ {
-	int TOP, ARRAY[MAX_SIZE] ;
+	int TOP, ARRAY[MAX] ;
 }*stack;
 
 int main() {
@@ -98,7 +98,7 @@ void display() {
 void push() {
 	int i, item;
 
-	if(stack->TOP == MAX_SIZE - 1) {
+	if(stack->TOP == MAX - 1) {
 		printf("\n\t!!! STACK FULL. CAN'T INSERT NEW ELEMENT !!!\n\n");
 		return;
 	}

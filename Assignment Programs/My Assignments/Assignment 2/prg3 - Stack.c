@@ -7,14 +7,14 @@ Write a menu driven program in C to perform Stack operations (Push, Pop, Peek, D
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 4
+#define MAX 4
 
-void display();
+void displayStack();
 void push();
 void pop();
 void peek();
 
-int STACK[MAX_SIZE], TOP = -1;
+int STACK[MAX], TOP = -1;
 
 
 int main() {
@@ -55,7 +55,7 @@ int main() {
 
 			case 4:
 
-				display();
+				displayStack();
 
 				break;
 
@@ -76,7 +76,7 @@ int main() {
 	return 0;
 }
 
-void display() {
+void displayStack() {
 	int i;
 
 	if(TOP == -1) {
@@ -98,7 +98,7 @@ void display() {
 void push() {
 	int i, item;
 
-	if(TOP == MAX_SIZE - 1) {
+	if(TOP == MAX - 1) {
 		printf("\n\t!!! STACK FULL. CAN'T INSERT NEW ELEMENT !!!\n\n");
 		return;
 	}
@@ -151,7 +151,7 @@ void peek() {
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 1
+Enter corresponding numbers of your choice : 1
 
 	-- PUSH ELEMENT IN STACK --
 
@@ -174,7 +174,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 1
+Enter corresponding numbers of your choice : 1
 
 	-- PUSH ELEMENT IN STACK --
 
@@ -197,7 +197,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 1
+Enter corresponding numbers of your choice : 1
 
 	-- PUSH ELEMENT IN STACK --
 
@@ -221,7 +221,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 1
+Enter corresponding numbers of your choice : 1
 
 	-- PUSH ELEMENT IN STACK --
 
@@ -246,7 +246,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 1
+Enter corresponding numbers of your choice : 1
 
 	-- PUSH ELEMENT IN STACK --
 
@@ -262,7 +262,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 2
+Enter corresponding numbers of your choice : 2
 
 	-- POP ELEMENT FROM STACK --
 
@@ -284,7 +284,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 3
+Enter corresponding numbers of your choice : 3
 
 	 >> THE TOP OF THE STACK IS = 30 at INDEX = 0 <<
 Press Enter to continue....
@@ -297,8 +297,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 4
-
+Enter corresponding numbers of your choice : 4
 
 The STACK is :
 
@@ -316,7 +315,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 2
+Enter corresponding numbers of your choice : 2
 
 	-- POP ELEMENT FROM STACK --
 
@@ -336,7 +335,7 @@ Press Enter to continue....
 	 4. DISPLAY
 	 0. Exit
 
-	Enter corresponding numbers of your choice : 2
+Enter corresponding numbers of your choice : 2
 
 	-- POP ELEMENT FROM STACK --
 
