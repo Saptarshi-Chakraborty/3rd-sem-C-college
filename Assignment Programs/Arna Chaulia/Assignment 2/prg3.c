@@ -3,6 +3,7 @@
 #include <stdlib.h>
 
 #define MAX 4
+
 void display();
 void push();
 void pop();
@@ -78,9 +79,10 @@ void push()
         printf("\n\tStack is full...!\n\n");
         return;
     }
+
     printf("Enter new element : ");
     scanf("%d", &item);
-    top = top + 1;
+    top = top + 1; // top++ ;
 
     Stack[top] = item;
     printf("\n Successfully pushed %d in the stack \n", item);
@@ -95,7 +97,10 @@ void pop()
         printf("\n Stack is empty..!\n\n");
         return;
     }
-    top = top - 1;
+
+    // 0 | 1 | 2
+
+    top = top - 1; // top-- ;
     printf("\n The element %d is successfully deleted from top \n", Stack[top + 1]);
     display();
 }
@@ -136,17 +141,17 @@ Press Enter to continue....
  2. POP
  3. PEEK
  4. DISPLAY
-    
+
 Enter a option : 1
 
 Enter new element : 2
 
  Successfully pushed 2 in the stack
-    
+
 The STACK is :
 
         | 2 | <---- [top]
-        | 1 | 
+        | 1 |
 
 Press Enter to continue....
         --------- STACK OPERATIONS ----------
@@ -166,7 +171,7 @@ The STACK is :
 
         | 3 | <---- [top]
         | 2 |
-        | 1 | 
+        | 1 |
 
 Press Enter to continue....
         --------- STACK OPERATIONS ----------
@@ -212,7 +217,7 @@ Press Enter to continue....
  4. DISPLAY
 
 Enter a option : 2
-    
+
      The element 4 is successfully deleted from top
 
 The STACK is :
@@ -258,11 +263,11 @@ Press Enter to continue....
     4. DISPLAY
 
 Enter a option : 2
-    
+
          The element 3 is successfully deleted from top
-    
+
 The STACK is :
-    
+
             | 2 | <---- [top]
             | 1 |
 
@@ -275,12 +280,12 @@ Press Enter to continue....
     4. DISPLAY
 
 Enter a option : 2
-    
+
          The element 2 is successfully deleted from top
 
 The STACK is :
-    
-            | 1 | <---- [top]   
+
+            | 1 | <---- [top]
 
 Press Enter to continue....
         --------- STACK OPERATIONS ----------
@@ -291,11 +296,11 @@ Press Enter to continue....
     4. DISPLAY
 
 Enter a option : 2
-    
+
          The element 1 is successfully deleted from top
 
 The STACK is :
-    
+
             Stack is empty..!
 
 Press Enter to continue....
@@ -307,7 +312,7 @@ Press Enter to continue....
     4. DISPLAY
 
 Enter a option : 2
-    
+
          Stack is empty..!
 
 Press Enter to continue....
@@ -323,7 +328,7 @@ Enter a option : 3
      Stack is empty...!
 
 Press Enter to continue....
-    
+
         --------- STACK OPERATIONS ----------
     0. Exit
     1. PUSH
@@ -332,8 +337,8 @@ Press Enter to continue....
     4. DISPLAY
 
 Enter a option : 0
-    
-        THANK YOU 
+
+        THANK YOU
 
 
 
